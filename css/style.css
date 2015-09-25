@@ -1,0 +1,44 @@
+body{
+	font-family: 'Dosis', sans-serif;
+}
+p{
+	font-family: sans-serif;
+}
+a{
+	font-family: 'Dosis', sans-serif;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Dosis', sans-serif;
+}
+
+.jumbotron{
+	height: 600px;
+	background-image: url("../image/bg-jumbotron.jpg");
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	background-color: #fff;
+	opacity: 0.9;
+	border-radius: 0px;
+}
+
+.jumbotron img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 150px;
+}
+
+.jumbotron h3{
+	color: #fff;
+	text-align: center;
+	font-size: 3em;
+	font-style: italic;
+}
+
+.jumbotron p{
+	color: #fff;
+	text-align: center;
+	font-size: 1.5em;
+	font-style: normal;
+}
