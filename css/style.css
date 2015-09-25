@@ -47,6 +47,9 @@ h1, h2, h3, h4, h5, h6{
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
 }
 
 .skill-title h3{
