@@ -360,6 +360,19 @@ hr {
 .featured-container .featured-img img {
     max-width: 100%;
     height: auto;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+
+.featured-container .featured-img img:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .featured-container .featured-img.featured-img-avatar {
@@ -572,11 +585,11 @@ hr {
 }
 
 .post-link a:focus,
-.post-link a:hover{
+.post-link a:hover {
     color: #39b3d7;
 }
 
-.post-link a:hover>span{
+.post-link a:hover>span {
     color: #5bc0de;
     -webkit-border-radius: 14px;
     -moz-border-radius: 14px;
@@ -628,11 +641,11 @@ hr {
     text-align: justify
 }
 
-.post-atribut{
+.post-atribut {
     background-color: #fff;
-    border:1px solid #eee;
-    border-bottom-width:3px;
-    padding: 20px 25px; 
+    border: 1px solid #eee;
+    border-bottom-width: 3px;
+    padding: 20px 25px;
 }
 
 .post-atribut .fa,
@@ -659,7 +672,7 @@ hr {
     text-align: center
 }
 
-#footer{
+#footer {
     width: 100%;
     color: #ddd;
     padding: 80px 0 60px;
