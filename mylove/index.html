@@ -21,45 +21,45 @@
     <script type="text/javascript" src="typed.js"></script>
     <script>
     $(document).ready(function() {
-                $(".text-show").typed({
-                        strings: ["10/04/1996 - 497/7 Trường Chinh - Pleiku - Gia Lai <br>Em à ! Valentine này là valentine đầu tiên của em với anh, anh cũng không biết nguồn gốc rõ ràng của ngày valentine này bắt nguồn từ đâu nhưng anh hiểu được ý nghĩa của nó . Mới quen nhau được gần 2 tháng mà em đã xa anh gần 1 tháng rồi, kiểu như có gì đang thử thách chúng ta đúng không, hứa với anh nhé dù có thử thách như thế nào thì em cũng sẽ đứng dậy và đi cùng anh nhé ♥ bé bèo của anh.Có thể em không phải là người đầu tiên và anh cũng vậy nhưng anh mong một ngày nào đó mình sẽ là người cuối cùng của nhau để hưởng trọn những ngày valentine còn lại nhé.À mà anh muốn ngày nào cũng là ngày valentine chứ không phải chỉ có hôm nay 14/02 mới là valentine ^^ <br> Anh sẽ dành cả bờ vai của mình cho em để những lúc em cảm thấy buồn sẽ dựa vào. Em hãy đi đến những nơi mà em chưa bao giờ tới nhé , a sẽ dắt em nên em sẽ không bao giờ lo lạc đường như cái lí do em nhờ anh làm xe ôm cho em đâu . Có thể anh kém người khác về những thứ mà họ có nhưng tình YÊU mà anh dành cho EM thì anh có nhiều hơn tất cả.  'Cho tới thời điểm này, ngoài ba mẹ với bà Bống ra, chưa ai chịu được con lâu như vậy ' a hứa và sẽ làm mọi thứ nhường nhịn em nè để là người tiếp theo chịu đựng được em lâu như vậy để em cho anh vô cái danh sách những người chịu đựng em lâu. < br > 'Trái tim anh nguyện thề yêu em , gửi trọn tình yêu đến em' < br > 'Dấu yêu ơi anh muốm yêu em mãi mãi !!!'
-                            "],
-                            typeSpeed: 0
-                        }); $("#btnYes").click(function() {
-                        alert("Thank you ! Cảm ơn em vì đã chọn anh, giờ xuống dưới đọc tiếp đi. À mà đọc xong nhớ bấm vào hình hộp quà nha");
-                        $(".content-hide").show();
-                    });
-                    var flag = 1;
-                    var count = 0;
+        $(".text-show").typed({
+            strings: ["10/04/1996 - 497/7 Trường Chinh - Pleiku - Gia Lai <br>Em à ! Valentine này là valentine đầu tiên của em với anh, anh cũng không biết nguồn gốc rõ ràng của ngày valentine này bắt nguồn từ đâu nhưng anh hiểu được ý nghĩa của nó . Mới quen nhau được gần 2 tháng mà em đã xa anh gần 1 tháng rồi, kiểu như có gì đang thử thách chúng ta đúng không, hứa với anh nhé dù có thử thách như thế nào thì em cũng sẽ đứng dậy và đi cũng anh nhé ♥ bé bèo của anh.Có thể em không phải là người đầu tiên và anh cũng vậy nhưng anh mong một ngày nào đó mình sẽ là người cuối cùng của nhau để hưởng trọn những ngày valentine còn lại nhé <br> Anh sẽ dành cả bờ vai của mình cho em để những lúc em cảm thấy buồn sẽ dựa vào. Em hãy đi đến những nơi mà em chưa bao giờ tới nhé , a sẽ dắt em nên em sẽ không bao giờ lo lạc đường như cái lí do em nhờ anh làm xe ôm cho em đâu . Có thể anh kém người khác về những thứ mà họ có nhưng tình YÊU mà anh dành cho EM thì anh có nhiều hơn họ. <br>'Trái tim anh nguyện thề yêu em , gửi trọn tình yêu đến em' <br>'Dấu yêu ơi anh muốm yêu em mãi mãi !!!'"],
+            typeSpeed: 0
+        });
+        $("#btnYes").click(function() {
+            alert("Thank you ! Cảm ơn em vì đã chọn anh, giờ xuống dưới đọc tiếp đi. À mà đọc xong nhớ bấm vào hình hộp quà nha");
+            $(".content-hide").show();
+        });
+        var flag = 1;
+        var count = 0;
 
-                    $("#btnNo").mousemove(function(e) {
-                        if (flag == 1) {
-                            console.log(x);
-                            $('#btnNo').css({
-                                'margin-top': '100px',
-                                'margin-left': '100px',
-                            });
-                            count++;
-                        }
-                        console.log(flag);
-                        if (flag == 2) {
-                            var x = (e.pageX + 100) + "px";
-                            console.log(x);
-                            $('#btnNo').css({
-                                'margin-top': '100px',
-                                'margin-left': '400px',
-                            });
-                            count++
-                        }
-                        flag = flag + 1;
-                        if (flag == 3) {
-                            flag = 1;
-                        }
-                        if (count == 5) {
-                            alert("Chọn Có đi chứ còn chần chừ gì nữa ! anh cắn cho giờ");
-                        }
-                    });
+        $("#btnNo").mousemove(function(e) {
+            if (flag == 1) {
+                console.log(x);
+                $('#btnNo').css({
+                    'margin-top': '100px',
+                    'margin-left': '100px',
                 });
+                count ++;
+            }
+            console.log(flag);
+            if (flag==2) {
+                var x = (e.pageX + 100) + "px";
+                console.log(x);
+                $('#btnNo').css({
+                    'margin-top': '100px',
+                    'margin-left': '400px',
+                });
+                count++
+            }
+            flag=flag+1;
+            if (flag==3) {
+                flag=1;
+            }
+            if (count==5) {
+                alert("Chọn Có đi chứ còn chần chừ gì nữa ! anh cắn cho giờ");
+            }
+        });
+    });
     </script>
 </head>
 
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="row alert alert-success">
-                    <small>Món quàn này chỉ có tinh thần và không có chút vật chất nào cả! A mong em khi đọc hết những dòng ở trên sẽ mỉm cười ! và nhớ đến anh . Chú của Cháu --- Mountain Nguyễn ---</small>
+                        <small>Món quàn này chỉ có tinh thần và không có chút vật chất nào cả! A mong em khi đọc hết những dòng ở trên sẽ mỉm cười ! và nhớ đến anh . Chú của Cháu --- Mountain Nguyễn ---</small>
                 </div>
             </div>
         </div>
