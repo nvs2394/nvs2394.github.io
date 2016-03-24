@@ -1,0 +1,71 @@
+<!--begin:article-->
+  <div class="article" ng-controller="FestivalCtrl" data-ng-init="getUpcommingFestival()">
+   
+
+    <div class="row">
+      <h2 class="head-title" style="margin-left:0px; margin-right: 0px;">Lễ hội sắp diễn ra</h2>
+        <div id="upcomingFestivalLoader" class="col-xs-12" style="text-align: center;">
+          <img src="images/fbloader.gif"/>
+        </div>
+        <div class="col-sm-4 col-xs-6" ng-repeat="itemUpcommingFestival in upcommingFestivalData">
+            <div class="image-wrapper overlay-fade-in">
+                <a href="#">
+                    <img class="img-responsive" src="images/hang-en-ivivu.jpg" alt="hang-en"/>
+                    <div class="image-overlay-content">
+                        <h4>{{itemUpcommingFestival.title}}</h4>
+                        <p class="">{{itemUpcommingFestival.content}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>      
+    </div>
+  </div>
+<!--end:article-->
+
+<!-- begin:content -->
+<div id="content" ng-controller="ReviewCtrl"  data-ng-init="getTopReviews()">
+    <div class="row">
+    <h2 class="head-title" style="margin-right: 10px; margin-left: 10px;">Review về lễ hội</h2>
+    <div id="topReviewsLoader" class="col-xs-12" style="text-align: center;">
+      <img src="images/fbloader.gif"/>
+    </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 zenFadeInRightBig" ng-repeat="itemReview in topReviewsData">
+            <div class="post-container">
+                <div class="post-content">
+                  <div class="content-decribe">
+                    <img src="images/sac-mau-ky-ao-cua-nhung-le-hoi-thang-hai-ivivu-1.jpg" alt="sac-mau-ky-ao-cua-nhung-le-hoi-thang-hai"/>
+                    <div class="heading-title heading-small">
+                        <h2><a href="#">{{itemReview.title}}</a></h2>
+                    </div>
+                    <div class="post-meta">
+                        <span>By <a href="#" title="Posts by admin" rel="author">Admin</a></span>
+                        <span>05/02/2016</span>
+                    </div>
+                    <div class="time">
+                      <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                      <span>05/02/2016</span> - <span>10/02/2016</span>
+                    </div>
+                    
+                    <p>Không chỉ có Tết Nguyên đán ở các nước châu Á...</p>
+                  </div>
+
+                    <div class="post-atribut">
+                      <div class="row">
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <a href="#"><span><i class="fa fa-heart"></i> 1000</span></a>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <a href="#"><span><i class="fa fa-comments"></i> 420</span></a>
+                          </div>
+                          <div class="col-md-4 col-sm-4 col-xs-4">
+                              <a href="#"><span><i class="fa fa-eye"></i> 2500</span></a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end:content-->
+<div class="clearfix "></div>
