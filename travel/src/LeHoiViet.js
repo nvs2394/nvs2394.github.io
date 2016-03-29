@@ -7,7 +7,7 @@ var myModule = angular.module('LeHoiViet',
         'LeHoiViet.Login',
         'LeHoiViet.Festival',
         'LeHoiViet.Review',
-        'LeHoiViet.User'
+        'LeHoiViet.User',
     ]);
 
 myModule.config(function($routeProvider) {
@@ -16,4 +16,9 @@ myModule.config(function($routeProvider) {
             templateUrl: 'src/login/template/login.html',
             controller: 'LoginCtrl'
         });
+    });
+
+myModule.config(function($httpProvider) {
+  $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+  $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
     });

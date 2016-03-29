@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="article">
+<html ng-app="LeHoiViet">
 
 <head>
     <meta charset="utf-8">
@@ -17,9 +17,12 @@
 
     <!--CSS customize-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/article.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!--CSS barrating-->
+    <link rel="stylesheet" type="text/css" href="lib/barrating/bars-1to10.css">
+    <script type="text/javascript" src="lib/barrating/jquery.barrating.js"></script>
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Noto+Serif:700,400italic' rel='stylesheet' type='text/css'>
@@ -28,17 +31,15 @@
    
 </head>
 
-<body ng-controller="MainController">
+<body ng-controller="MainCtrl as main">
 
     <div id="menu" ng-include="'views/public/menu.html'"></div>
     <div ng-include="'views/public/header.html'"></div>
+    <div id="login" ng-include="'views/public/login.html'"></div>
 
 <div id="#"></div>
 <!--begin:main-->
 <div id="" class="container">
-    <section id="promotion" class="row">
-        <div ng-include="'views/public/promotion.html'"></div>
-    </section>
     <div id="main" class="row">
 
         <div id="main-left" class="col-md-9">
@@ -66,13 +67,24 @@
   <a href="#"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></span></a>
 </div>
 
-<script type="text/javascript " src="js/script.js "></script>
+    <script type="text/javascript" src="js/script.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.4.5/angular-cookies.js"></script>
+    <script src="src/LeHoiViet.js"></script>  
+    <script src="src/app/App.js"></script>  
+    <script src="src/app/controllers/MainController.js"></script>  
+    <script src="src/app/services/LoginService.js"></script>  
+    <script src="src/app/services/EndPointConfigService.js"></script> 
+    <script src="src/login/Login.js"></script>  
+    <script src="src/login/controllers/LoginController.js"></script>
+    <script src="src/festival/Festival.js"></script>  
+    <script src="src/festival/controllers/FestivalController.js"></script>
+    <script src="src/review/Review.js"></script>
+    <script src="src/review/controllers/ReviewController.js"></script>
+    <script src="src/user/User.js"></script>
+    <script src="src/user/Controller/UserController.js"></script>
 
-<script>
-    angular.module("article", []).controller("MainController", function($scope) {
-
-    });
-</script>
                         
 </body>
 

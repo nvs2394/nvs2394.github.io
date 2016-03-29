@@ -2,9 +2,9 @@
     <div class="info-lehoi">
       <div>
         <ul>
-          <li>Một địa điểm lí tưởng cho bạn chụp hình vào cuối tuần!</li><br>
-          <li>Không gian đẹp, ấn tượng với lỗi kiến trúc mô phỏng Châu Âu cổ kính mà sang trọng</li><br>
-          <li>Là điểm đến lí tưởng cho những ai chịu khó di chuyển ra ngoài trung tâm để thưởng thức khung cảnh ngoại ô trong lành</li><br>
+          <li>Một địa điểm lí tưởng cho bạn chụp hình vào cuối tuần!</li></br>
+          <li>Không gian đẹp, ấn tượng với lỗi kiến trúc mô phỏng Châu Âu cổ kính mà sang trọng</li></br>
+          <li>Là điểm đến lí tưởng cho những ai chịu khó di chuyển ra ngoài trung tâm để thưởng thức khung cảnh ngoại ô trong lành</li></br>
         </ul>
       </div>
     </div>
@@ -13,7 +13,7 @@
       <div class="res-common-ratting">
         <ul class="ratting-action row">
           <li class="col-sm-6 col-xs-12 row">
-            <a class="col-xs-9" href="">
+            <a class="col-xs-9" href="" data-toggle="modal" data-target="#review-comment">
               <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                Viết bình luận
             </a>
@@ -322,7 +322,7 @@
                           <div class="review-reply-item-content col-md-11 col-sm-11 col-xs-10">
                             <a class="user-link" href="">Duy Anh</a>
                             <span>Yeap</span>
-                            <br>
+                            </br>
                             <span class="address">22/08/2015 11:05</span>
                             <a class="userlike" href="">like</a>
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
@@ -338,7 +338,7 @@
                           <div class="review-reply-item-content col-md-11 col-sm-11 col-xs-10">
                             <a class="user-link" href="">Le</a>
                             <span>Bạn ơi, cho mình hỏi nếu như mình chụp hình cưới ekip 6 người, không biết trong phim trường tính phí thế nào nhỉ?</span>
-                            <br>
+                            </br>
                             <span class="address">22/02/2016 14:08</span>
                             <a class="userlike" href="">like</a>
                             <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
@@ -469,3 +469,164 @@
   </div>
 </div><!--end:microsite-box-->
 </div><!--end:micro-greyrow-->
+
+<!--review-->
+<div id="review-comment" class="modal fade" tabindex="-1" role="dialog" >
+<form>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Viết bình luận: <span>Festival hoa Đà Lạt</span></h4>
+      </div>
+      <div class="modal-body row">
+
+        <div class="inputform-text col-sm-8">
+          <div>
+            <input id="txtReviewTitle" class="form-control" type="text" placeholder="Nhập tiêu đề, ví dụ: không gian ở đây thật tuyệt" />
+          </div>
+          <div class="textareas">
+            <div class="form-control">
+              <textarea  placeholder="Nhập nội dung bình luận"></textarea>
+              <div class="placeholder-content">Viết trên 100 từ, đúng chính tả, ngôn từ văn hóa, không spam...</div>
+            </div>  
+          </div>
+        </div>
+        <div class="inputform-right col-sm-4">
+          <div class="inputform-rating">
+            <h3 class="rating-header">Đánh giá</h3>
+
+            <div class="rating-item row">
+              <div class="rating-lable col-xs-4">Vị trí tốt: </div>
+              <div class="rating-bar col-xs-8">
+                <div class="box-body">
+                    <select id="rating-address" name="rating">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5" selected="selected">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+              </div>
+            </div>
+            <div class="rating-item row">
+              <div class="rating-lable col-xs-4">Giá cả: </div>
+              <div class="rating-bar col-xs-8">
+                <div class="box-body">
+                    <select id="rating-price" name="rating">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5" selected="selected">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+              </div>
+            </div>
+            <div class="rating-item row">
+              <div class="rating-lable col-xs-4">Chất lượng: </div>
+              <div class="rating-bar col-xs-8">
+                <div class="box-body">
+                    <select id="rating-quality" name="rating">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5" selected="selected">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+              </div>
+            </div>
+            <div class="rating-item row">
+              <div class="rating-lable col-xs-4">Phục vụ: </div>
+              <div class="rating-bar col-xs-8">
+                <div class="box-body">
+                    <select id="rating-serve" name="rating">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5" selected="selected">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+              </div>
+            </div>
+            <div class="rating-item row">
+              <div class="rating-lable col-xs-4">Không gian: </div>
+              <div class="rating-bar col-xs-8">
+                <div class="box-body">
+                    <select id="rating-place" name="rating">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5" selected="selected">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 upload-image">
+          <div class=""><span class="glyphicon glyphicon-plus"></span>Thêm ảnh (không bắt buộc)</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-default" href="" style="float: left"><span class="glyphicon glyphicon-plus"></span>Thêm ảnh</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Đóng lại</button>
+        <button type="button" class="btn btn-primary">Hoàn tất</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<script type="text/javascript">
+  $(function() {
+        $('#rating-address').barrating('show', {
+            theme: 'bars-1to10'
+        });
+
+        $('#rating-price').barrating('show', {
+            theme: 'bars-1to10'
+        });
+
+        $('#rating-quality').barrating('show', {
+            theme: 'bars-1to10'
+        });
+
+        $('#rating-serve').barrating('show', {
+            theme: 'bars-1to10'
+        });
+        $('#rating-place').barrating('show', {
+            theme: 'bars-1to10'
+        });
+});
+
+</script>

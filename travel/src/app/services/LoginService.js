@@ -15,10 +15,13 @@ angular.module('LeHoiViet.Common')
 				userLogin.password = password;
 				$http({
 				  method: "POST",
+				  cache: true,
 				  url: EndPointConfigService.getUrl(MODEL),
+				 withCredentials : true,
 				  data: userLogin
 				}).then(function successCallback(response) {
 					callback(response);
+					
 				  }, function errorCallback(response) {
 				  	callback(response);
 				  });
