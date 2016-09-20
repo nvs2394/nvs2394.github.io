@@ -4,11 +4,11 @@
           <ul class="row item">
               <li class="col-md-1 col-sm-1 col-xs-3" ng-repeat="member in members">
                   <a href="" ng-click="checkLoginSeeUser(member._id)">
-                      <img class="img-responsive img-circle" src="http://lehoiviet.herokuapp.com{{member.avatar}}"/>
-                      <span>{{member.firstName}}</span>
+                      <div><img class="img-responsive img-circle" src="http://lehoiviet.herokuapp.com{{member.avatar}}"/></div>
+                      {{member.firstName}}
                   </a>
               </li>
           </ul>
-          <a href="/members" class="hvr-shutter-out-horizontal">Xem tất cả top thành viên</a>
+          <a href="/members" class="member btn-blue">Xem tất cả top thành viên</a>
   </div>
 </div>
