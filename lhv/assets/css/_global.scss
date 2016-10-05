@@ -2,6 +2,9 @@
 a:active, a:hover, a:visited, a:focus, button:active, button:hover, button:visited, button:focus{
     outline: 0 !important;
 }
+select:focus, select:active, select:visited{
+  outline: 0;
+}
 .modal-open {
   overflow-y: scroll;
   padding-right: 0 !important;
@@ -161,7 +164,9 @@ li {
         }
     }
 }
-
+nav{
+  border: 1px solid #ddd !important;
+}
 #menu {
     background-color: #fff;
     font-size: 14px;
@@ -174,6 +179,10 @@ li {
         &:hover {
             background-color: #2466a0;
         }
+    }
+    .navbar-brand img{
+        width: 180px;
+        height: auto;
     }
     .live-now{
       color: #c00;
@@ -669,12 +678,8 @@ li {
     padding-top: 15%;
     text-transform: uppercase;
     }
-    video{
-      width: 100%;
-    }
-    .logo img{
-      width: 80px;
-      margin: 0 auto
+    video {
+        width: 100%;
     }
     .title{
       font-size: 36px;

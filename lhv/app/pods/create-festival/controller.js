@@ -1,9 +1,11 @@
 var createFestival = angular.module("lehoiviet");
 
-createFestival.controller("createFestivalController", function($scope, festivalService, categoryService, provinceService, dateHelper) {
+createFestival.controller("createFestivalController", function($scope, festivalService,
+  categoryService, provinceService, imageService, dateHelper, $window, $compile, $sce) {
   $scope.initData = function() {
     getCategories();
     getProvincies();
+    validate();
   };
 
   getCategories = function() {
@@ -22,32 +24,18 @@ createFestival.controller("createFestivalController", function($scope, festivalS
     });
   };
 
-  createFestival = function(data) {
-    festivalService.create(data, function(response) {
-      if (response.status == 200) {
-        $('#post-success').modal('show');
-      }
-      else {
-
-      }
-    });
-  };
-
-  $scope.changTab = function(info){
-    $('.infoList a').removeClass('action');
+  $scope.onChangeTab = function(info){
+    $('.infoList li').removeClass('action');
     $('.infoList #' + info).addClass('action');
     $('.infoTab section').addClass('hide');
     $('.' + info + 'Tab').removeClass('hide')
+    $window.scrollTo(0, 0); // scroll top
   };
 
   $scope.onProvinceSelected = function(province) {
+    $scope.festival.district = null;
     $scope.districts = province.districts;
   };
-
-  $scope.gotoDetail = function (tab) {
-    $scope.changTab(tab);
-    
-  }
 
   $scope.onCreateFestival = function(){
     var festival = {};
@@ -60,11 +48,51 @@ createFestival.controller("createFestivalController", function($scope, festivalS
     festival.emailAddress = $scope.emailAddress;
     festival.phoneNumber = $scope.phoneNumber;
     festival.typeEvent = $scope.typeEvent;
-    festival.mainAddress = $scope.nameAddress;
-    festival.city = $scope.province;
+    festival.mainAddress = $scope.mainAddress;
+    festival.city = $scope.city;
     festival.district = $scope.district;
     festival.priceTicket = $scope.priceTicket;
 
     createFestival(festival);
   };
+
+  $scope.onImageSelected = function(element) {
+       $scope.$apply(function(scope) {
+         $scope.isUploading = true;
+          var formData = new FormData();
+          formData.append("file", element.files[0]);
+          imageService.uploadBackgroundFestival(formData, function(response){
+            if(response.status == 200) {
+               $scope.backgroundFestival = response.data.data.imgName;
+            }
+           });
+       });
+  };
+
+  // image uploaded when image's rendered on screen
+  $scope.onImageUploaded = function() {
+    $scope.isUploading = false;
+  };
+
+  $scope.onSave = function() {
+    var festival = {};
+
+    if ($scope.festival == null || $scope.festival == undefined) {
+      return;
+    }
+
+    festival = $scope.festival;
+
+    $scope.isSaving = true;
+    festivalService.save(festival, $scope.festival.id, function(response) {
+      if (response.status == 200) {
+        $scope.festival.id = $scope.festival.id == null ? response.data.data._id : $scope.festival.id;
+        $scope.isSaving = false;
+      }
+    });
+  };
+
+  validate = function() {
+    
+  }
 });
