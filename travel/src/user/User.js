@@ -1,1 +1,0 @@
-angular.module("LeHoiViet.User", ["LeHoiViet.Common"]);

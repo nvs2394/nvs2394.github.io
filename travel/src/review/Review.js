@@ -1,1 +1,0 @@
-angular.module("LeHoiViet.Review",["LeHoiViet.Common"]);

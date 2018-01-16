@@ -1,63 +1,33 @@
-$(function() {
-    var pull 		= $('#pull');
-    menu 		= $('.dropMenu');
-    menuHeight	= menu.height();
+$( document ).ready(function() {
+                
+                $("#about_scroll").fadeOut();   
+                $("#work_scroll").fadeOut();
+                $("#contact_scroll").fadeOut();
 
-    $(pull).on('click', function(e) {
-        menu.slideToggle(700);
-    });
-
-    $(window).resize(function(){
-        var w = $(window).width();
-        if(w > 600 && menu.is(':hidden')) {
-            menu.removeAttr('style');
-        }
-
-    });
-    $(".dropdown").on('click', function() {
-        $(this).children(".submenu").slideToggle();
-    })
-    //detail
-    var value = parseInt($('#input-count').val());
-    $('.counter-plus').click(function(){
-        $('#input-count').val(value++);
-    });
-    $('.counter-minus').click(function(){
-        $('#input-count').val(value--);
-    });
-
-    $('.myCart .dropdown-toggle').click(function(){
-        $('.dropdown-menu').slideToggle('500');
-    });
-});
-
-function changTab(info) {
-    $('.tablist a').removeClass('active');
-    $('.tablist .' + info).addClass('active');
-    $('.product-layout section').addClass('hide')
-    $('.product-layout .' + info + 'Tab').removeClass('hide')
-}
-
-$(document).on('ready', function() {
-
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        centerMode: true,
-        focusOnSelect: true
-    });
-    $('.slider-relate').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        focusOnSelect: true
-    });
-
-});
+                $("#about").click(function(){
+                    $("#index").fadeOut();
+                    $("#about_scroll").fadeIn();
+                    $('#about_left').addClass('animated slideInLeft');
+                    $('#about_right').addClass('animated slideInRight');
+                    });
+                $("#work").click(function(){
+                    $("#index").fadeOut();
+                    $("#work_scroll").fadeIn();
+                    $('#work_left').addClass('animated slideInLeft');
+                    $('#work_right').addClass('animated slideInRight');
+                    });
+                $("#contact").click(function(){
+                    $("#index").fadeOut();
+                    $("#contact_scroll").fadeIn();
+                    $('#contact_left').addClass('animated slideInLeft');
+                    $('#contact_right').addClass('animated slideInRight');
+                    });
+                
+                $(".back").click(function(){
+                    $(".pages").fadeOut();
+                    $("#index").fadeIn();
+                    $('#index_left').addClass('animated slideInLeft');
+                    $('#index_right').addClass('animated slideInRight');
+                    });
+           
+		});
